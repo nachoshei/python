@@ -1,0 +1,6 @@
+print("------------------------------------------------")
+print("Ejercicio2: TRIANGULO EQUILATERO")
+print("------------------------------------------------")
+ALT = float(input("Ingrese la altura del triangulo: "))
+PER = 3 * (2 * ALT / 3**0.5)
+print("El perimetro del triangulo es: " , PER)
