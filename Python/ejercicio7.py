@@ -6,4 +6,3 @@ B = int(input("Ingrese la segunda nota: "))
 C = A + B
 D = C / 2
 print("El promedio es " , D)
-

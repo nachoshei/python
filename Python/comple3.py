@@ -1,10 +1,10 @@
 print("------------------------------------------------")
 print("Ejercicio3: INTERCAMBIO MONEDA")
 print("------------------------------------------------")
-DOLAR = 1
-EURO = 1
-float(input("Ingrese la cantida en pesos: "))
-d = 873.26 / DOLAR
-e = 933.82 / EURO
-print("Su equivalente en dolares es de: " , DOLAR)
-print("Y su equivalentes en euros es de: " , EURO)
+DOLAR = 873.26
+EURO = 936.29
+ars = float(input("Ingrese la cantida en pesos: "))
+d = ars / DOLAR
+e = ars / EURO
+print("Su equivalente en dolares es de: " , d)
+print("Y su equivalentes en euros es de: " , e)
