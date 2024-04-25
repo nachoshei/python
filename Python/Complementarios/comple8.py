@@ -1,0 +1,8 @@
+print("------------------------------------------------")
+print("Ejercicio8: TIEMPO DE ENCUENTRO")
+print("------------------------------------------------")
+velocidadA = float(input("Ingrese la velocidad de A: "))
+velocidadB = float(input("Ingrese la velocidad de B: "))
+D = float(input("Ingrese la distancia que los separa: "))
+tiempoE = D/(velocidadA + velocidadB)
+print("Los cuerpos se encontraran en: " , tiempoE, "segundos")
