@@ -5,5 +5,5 @@ calculo = {
     2: 100 ** V,
     3: 100 / V
 }
-Resultado = calculo.get(num1, "Numero invalido")
+Resultado = calculo.get(num1)#"Numero invalido"
 print("El resultado es: " , Resultado)
