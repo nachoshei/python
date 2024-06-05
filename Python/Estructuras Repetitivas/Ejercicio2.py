@@ -1,7 +1,6 @@
 print("-----------------------------------------------")
 print("Ejercicio2: DIVISORES")
 print("-----------------------------------------------")
-i = 1
 print("Introduce un numero y para acabar uno negativo: ")
 num = int(input("Num: "))
 while num > 0:
