@@ -1,5 +1,5 @@
 print("-----------------------------------------------------------")
-print("Ejercicio 3: SERIE")
+print("Ejercicio 4: SERIE")
 print("-----------------------------------------------------------")
 num = int(input("Ingrese el numero de terminos: "))
 s = 5
