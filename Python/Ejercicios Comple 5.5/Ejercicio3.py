@@ -4,7 +4,7 @@ print("-----------------------------------------------------------")
 b = 2
 for i in range(1, 29):
     co = 0
-    for a in range(2, b//2):
+    for a in range(2, b//1):
         if b % a == 0:
             co = co + 1
             a = b
