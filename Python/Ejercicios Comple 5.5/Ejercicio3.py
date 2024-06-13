@@ -1,11 +1,13 @@
 print("-----------------------------------------------------------")
-print("Ejercicio 3: SERIE")
+print("Ejercicio 3: CUBOS PRIMOS")
 print("-----------------------------------------------------------")
-num = int(input("Ingrese el numero de terminos: "))
-s = 5
-ser = 0
-a = 1
-for a in range(num):
-    s = s + 5
-    ser = ser + s
-print("La suma de la serie es: ", ser)
+b = 2
+for i in range(2, 29):
+    co = 0
+    for a in range(2, b//2):
+        if b % a == 0:
+            co = co + 1
+            a = b
+    if co == 0:
+        print("El cubo de ", b, "es: ", b**3)
+    b = b + 1
