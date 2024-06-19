@@ -1,5 +1,5 @@
 print("-----------------------------------------------------------")
-print("Ejercicio 9: MayorMenor")
+print("Ejercicio 9: MAYOR-MENOR")
 print("-----------------------------------------------------------")
 limite = int(input("Ingrese la cantidad de numeros a comparar: "))
 Num = int(input("Ingrese un numero: "))
