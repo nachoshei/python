@@ -1,3 +1,6 @@
+print("-----------------------------------------------------------")
+print("Matriz2: VERIFICAR SI LA MATRIZ ES SIMETRICA")
+print("-----------------------------------------------------------")
 A = []
 D = int(input("Ingrese dimensiones de arreglo: "))
 if 1 <= D and D <= 100:
