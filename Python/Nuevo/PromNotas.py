@@ -26,9 +26,9 @@ def promedio_notas_estudiantes():
 
     if ind_alum != -1:
         promedio = calcular_promedio(nota1[ind_alum], nota2[ind_alum], nota3[ind_alum])
-        print(f"El promedio de {alum_buscado.title()} es {math.ceil(promedio)}")
+        print(f"El promedio de {alum_buscado.title()} es {promedio: .2f})") #({promedio.__floor__})") #({math.ceil(promedio)}")
     else:
         print(f"No se pudo encontrar a {alum_buscado.title()}")
 
 # Ejecutar la función principal
-promedio_notas_estudiantes()
+promedio_notas_estudiantes()   

@@ -22,4 +22,4 @@ def producto_escalar():
     print("Multiplicación escalar =", multiplicar_vector(v1, v2, cantidad))
 
 # Ejecutar la función principal
-producto_escalar()
+producto_escalar()  

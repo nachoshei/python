@@ -10,9 +10,8 @@ def suma_matriz():
         for columna in range(num_columnas):
             matriz[fila][columna] = int(input(f"Ingrese el valor de {fila},{columna}: "))
 
+    sumaColumna1 = 0
     for fila in range(num_filas):
-        int(sumaColumna1 = 0)
-        sumacolumna = sumaColumna1 + matriz[fila]
-    print("La suma de la columna 1 es: {sumaColumna}")
-
+        sumaColumna1 += matriz[fila][0]
+    print(f"La suma de la columna 1 es: {sumaColumna1}")
 suma_matriz()
