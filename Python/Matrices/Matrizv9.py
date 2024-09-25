@@ -1,44 +1,57 @@
-def agregar_paciente(pacientes, nombre, diagnostico, costo):
+def calcular_promedios(estudiantes):
     """
-    Agrega un nuevo paciente a la lista de pacientes.
+    Calcula el promedio de notas por asignatura para cada estudiante.
     
-    :param pacientes: Lista de pacientes.
-    :param nombre: Nombre del paciente.
-    :param diagnostico: Diagnóstico del paciente.
-    :param costo: Costo del tratamiento del paciente.
+    :param estudiantes: Diccionario de estudiantes y sus notas.
+    :return: Diccionario de promedios.
     """
-    pacientes.append([nombre, diagnostico, costo])
+    promedios = {}
+    for estudiante, asignaturas in estudiantes.items():
+        promedios[estudiante] = {}
+        for asignatura, notas in asignaturas.items():
+            promedio = sum(notas) / len(notas) if notas else 0
+            promedios[estudiante][asignatura] = promedio
+    return promedios
 
-def calcular_costo_total(pacientes):
+def listar_estudiantes_con_promedio_alto(promedios, umbral):
     """
-    Calcula el costo total de tratamiento para todos los pacientes.
+    Lista los estudiantes con un promedio mayor a un valor dado en al menos una asignatura.
     
-    :param pacientes: Lista de pacientes.
-    :return: Costo total.
+    :param promedios: Diccionario de promedios.
+    :param umbral: Umbral de promedio.
     """
-    return sum(paciente[2] for paciente in pacientes)
+    print(f"Estudiantes con promedio mayor a {umbral} en alguna asignatura:")
+    for estudiante, asignaturas in promedios.items():
+        for asignatura, promedio in asignaturas.items():
+            if promedio > umbral:
+                print(f"{estudiante} en {asignatura} con promedio {promedio:.2f}")
 
-def listar_pacientes_costosos(pacientes, umbral):
+def agregar_nota(estudiantes, estudiante, asignatura, nota):
     """
-    Lista los pacientes con un costo de tratamiento mayor a un valor dado.
+    Agrega una nueva nota a un estudiante en una asignatura específica.
     
-    :param pacientes: Lista de pacientes.
-    :param umbral: Umbral de costo.
+    :param estudiantes: Diccionario de estudiantes y sus notas.
+    :param estudiante: Nombre del estudiante.
+    :param asignatura: Nombre de la asignatura.
+    :param nota: Nota a agregar.
     """
-    print(f"Pacientes con un costo de tratamiento mayor a {umbral}:")
-    for paciente in pacientes:
-        if paciente[2] > umbral:
-            print(f"Nombre: {paciente[0]}, Diagnóstico: {paciente[1]}, Costo: {paciente[2]}")
+    if estudiante in estudiantes:
+        if asignatura in estudiantes[estudiante]:
+            estudiantes[estudiante][asignatura].append(nota)
+        else:
+            estudiantes[estudiante][asignatura] = [nota]
+    else:
+        estudiantes[estudiante] = {asignatura: [nota]}
 
-# Lista inicial de pacientes
-pacientes = [
-    ["Juan Perez", "Gripe", 200],
-    ["Maria Garcia", "Fractura", 1500],
-    ["Ana Lopez", "Diabetes", 3000]
-]
+# Diccionario inicial de estudiantes y notas
+estudiantes = {
+    "Juan Perez": {"Matemáticas": [8, 9, 7], "Historia": [6, 7]},
+    "Maria Garcia": {"Matemáticas": [10, 9, 8], "Historia": [7, 8]},
+    "Ana Lopez": {"Matemáticas": [5, 6], "Historia": [9, 10]}
+}
 
 # Ejemplo de uso
-agregar_paciente(pacientes, "Carlos Diaz", "Alergia", 500)
-costo_total = calcular_costo_total(pacientes)
-print(f"Costo total de tratamiento: {costo_total}")
-listar_pacientes_costosos(pacientes, 1000)
+promedios = calcular_promedios(estudiantes)
+listar_estudiantes_con_promedio_alto(promedios, 8)
+agregar_nota(estudiantes, "Juan Perez", "Matemáticas", 10)
+print("Nuevas notas de Juan Perez:", estudiantes["Juan Perez"])
