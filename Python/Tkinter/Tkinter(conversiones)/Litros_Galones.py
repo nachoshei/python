@@ -3,7 +3,7 @@ import tkinter as tk
 def convertir_liquido():
     litros = float(entry_galones.get())
     galones = litros / 3.785
-    label_resultado_galones.config(text=f"La cantidad de es {galones:.2f} galones")
+    label_resultado_galones.config(text=f"La cantidad es de {galones:.2f} galones")
 
 ventana = tk.Tk()
 ventana.title("Conversor de Litros a Galones")
@@ -21,4 +21,4 @@ boton_convertir.pack()
 label_resultado_galones = tk.Label(ventana, text="")
 label_resultado_galones.pack()
 
-ventana.mainloop() 
+ventana.mainloop()
