@@ -10,7 +10,7 @@ VELOCIDAD_CAIDA = 500  # Controla la velocidad de caída de las piezas
 
 # Clase principal que representa el juego Tetris
 class TetrisApp:
-    def __init__(self, root):
+    def _init_(self, root):
         # Inicialización de la ventana principal del juego
         self.root = root
         self.root.title("Tetris")  # Título de la ventana
@@ -175,6 +175,3 @@ class TetrisApp:
 root = tk.Tk()
 app = TetrisApp(root)
 root.mainloop()  # Iniciar el bucle de eventos de tkinter
-
-
-
