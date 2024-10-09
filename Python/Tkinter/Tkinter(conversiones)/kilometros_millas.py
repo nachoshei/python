@@ -3,7 +3,7 @@ import tkinter as tk
 def convertir_distancia():
     try:
         kilometros = float(entry_kilometros.get())
-        millas = kilometros / 1.60934
+        millas = kilometros / 1.609
         label_resultado_millas.config(text=f"La longitud en millas es: {millas:.2f} millas")
     except ValueError:
         label_resultado_millas.config(text="Por favor. ingrese una longitud valida en kilometros.")

@@ -2,10 +2,12 @@ import tkinter as tk
 
 def convertir_volumen():
     try:
+        #convertir litros a galones
         litros = float(entry_litros.get())
         galones = litros * 0.264172
         label_resultado_galones.config(text=f"Litros a galones: {galones:.2f} gal")
 
+        #convertir mililitros a onzas
         mililitros = float(entry_mililitros.get())
         onzas = mililitros * 0.033814
         label_resultado_onzas.config(text=f"Mililitros a onzas: {onzas:.2f} fl oz")
@@ -13,10 +15,12 @@ def convertir_volumen():
         label_resultado_galones.config(text="Por favor, ingrese un valor valido de litros")
         label_resultado_onzas.config(text="Por favor, ingrese un valor valido de onzas")
 
+#crear ventana
 ventana = tk.Tk()
 ventana.title("Conversor de Volumen")
 ventana.geometry("300x200")
 
+#crear y ubicar elementos de la ventana
 label_instrucciones_litros = tk.Label(ventana, text="Ingrese el volumen de litros")
 label_instrucciones_litros.pack()
 
@@ -37,5 +41,6 @@ label_resultado_galones.pack()
 
 label_resultado_onzas = tk.Label(ventana, text="")
 label_resultado_onzas.pack()
+
 
 ventana.mainloop()
